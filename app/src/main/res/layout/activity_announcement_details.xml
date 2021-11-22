@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout
+          xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="#eee"
+      tools:context=".Activities.AnnouncementDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageButton
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_close" />
+
+        <TextView
+            android:id="@+id/ttileTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/close"
+            android:background="@color/white"
+            android:drawableStart="@drawable/ic_search_gray"
+            android:drawableLeft="@drawable/ic_search_gray"
+            android:padding="5dp"
+            android:text="Event "
+            android:textColor="@color/gray01"
+            android:textColorHint="@color/gray01" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/line"
+        android:background="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/toolbarRl">
+
+    </View>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/line"
+        android:id="@+id/coverIv"
+        android:background="@drawable/graduates"/>
+    <TextView
+        android:id="@+id/eventTitleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:maxLines="2"
+        android:layout_marginTop="220dp"
+        android:maxHeight="2dp"
+        android:paddingBottom="2dp"
+        android:layout_marginLeft="10dp"
+        android:text="WESTECH AFRICA ENGINEERING SOLUTIONS LIMITED"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/hostCv"
+        android:layout_below="@id/coverIv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:contentPadding="3dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/eventIconIv"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:src="@drawable/ic_event_add"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+
+            <TextView
+                android:id="@+id/descriptionTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/eventIconIv"
+                android:text="Hosted By:"
+                android:textColor="@color/blackTextColor" />
+
+            <TextView
+                android:id="@+id/hostTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/eventIconIv"
+                android:layout_below="@+id/descriptionTv"
+                android:singleLine="true"
+                android:text="laikipia university admin"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_margin="1dp"
+        android:id="@+id/dateCv"
+        android:layout_below="@id/hostCv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:contentPadding="3dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:id="@+id/timeIv"
+                android:src="@drawable/ic_time"/>
+
+            <TextView
+                android:id="@+id/dateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="13/017/2021"
+                android:padding="5dp"
+                android:layout_toRightOf="@+id/timeIv"
+                android:textSize="16sp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/blackTextColor" />
+
+            <TextView
+                android:id="@+id/timeTv"
+                android:padding="5dp"
+                android:layout_toRightOf="@+id/timeIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_below="@+id/dateTv"
+                android:singleLine="true"
+                android:layout_marginLeft="20dp"
+                android:text="2:00 to 12:00"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/venueCv"
+        android:layout_margin="1dp"
+        android:layout_below="@id/dateCv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:contentPadding="3dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:id="@+id/venueIv"
+                android:src="@drawable/ic_venue"/>
+
+            <TextView
+                android:id="@+id/venueTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Mandela hall"
+                android:padding="5dp"
+                android:layout_toRightOf="@+id/venueIv"
+                android:textSize="12sp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/blackTextColor" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="1dp"
+        android:id="@+id/cardDescription"
+        android:layout_below="@id/venueCv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:contentPadding="3dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:id="@+id/aboutIv"
+                android:src="@drawable/ic_about"/>
+
+            <TextView
+                android:id="@+id/aboutTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="WESTECH AFRICA ENGINEERING SOLUTIONS LIMITED"
+                android:padding="5dp"
+                android:layout_toRightOf="@+id/aboutIv"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/blackTextColor" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/green400"
+        app:rippleColor="@color/colorRed"
+        android:text="add to calender"
+        android:layout_marginRight="10dp"
+        android:id="@+id/btnCreate"
+        android:layout_marginTop="11dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/cardDescription"
+        android:background="@color/green400"
+        android:src="@drawable/ic_add"/>
+  </RelativeLayout>

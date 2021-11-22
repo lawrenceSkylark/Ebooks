@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eee"
+    tools:context=".Activities.AnnouncementsActivity">
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageButton
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_close" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_margin="30dp"
+            android:layout_toRightOf="@id/close"
+            android:id="@+id/searchEt"
+            android:hint="Announcements"
+            android:textColor="@color/gray01"
+            android:drawableStart="@drawable/ic_search_gray"
+            android:textColorHint="@color/gray01"
+            android:layout_marginStart="5dp"
+            android:padding="5dp"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/ic_search_gray" />
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/line"
+        android:background="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/toolbarRl">
+
+    </View>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/line"
+        android:id="@+id/groupsRs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/fragmentjoin"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:backgroundTint="@color/green400"
+        app:rippleColor="@color/colorRed"
+        app:borderWidth="0dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/btnCreate"
+        android:background="@color/green400"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_add"/>
+
+</RelativeLayout>
