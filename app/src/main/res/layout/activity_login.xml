@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back01"
+    tools:context=".Activities.LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageButton
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_close" />
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:text="Laikipia App Account"
+            android:textColor="#FF4300"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <ImageButton
+            android:id="@+id/helpBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_helpme" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/toolbarRl"
+        android:layout_marginTop="10dp"
+        android:background="@color/black">
+
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarRl"
+        android:layout_marginTop="30dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iconIv"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="5dp"
+            android:src="@drawable/studentportal" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/iconIv"
+            android:text="Laikipia"
+            android:textColor="#360000"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTv"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="-10dp"
+            android:layout_toRightOf="@+id/iconIv"
+            android:text="University"
+            android:textColor="#360000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iconIv"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="7dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Sign In"
+            android:textColor="#360000"
+            android:textSize="28sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailFill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sign"
+            android:layout_marginTop="10dp"
+            app:hintEnabled="false">
+
+            <EditText
+                android:id="@+id/emailEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext01"
+                android:drawableStart="@drawable/ic_email"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="10dp"
+                android:hint="someone@examble.com"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray01" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--            password-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordFill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailFill"
+            android:layout_marginTop="10dp"
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/passwordEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext01"
+                android:drawableStart="@drawable/ic_lock_gray"
+                android:drawableLeft="@drawable/ic_lock_gray"
+                android:drawablePadding="10dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray01" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <CheckBox
+            android:id="@+id/chebox"
+            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passwordFill"
+            android:layout_marginTop="8dp"
+            android:buttonTint="@color/black"
+            android:text="RememberMe"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/forgetPassTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passwordFill"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/chebox"
+            android:text="Forget Password?"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/forgetPassTv"
+            android:layout_marginTop="30dp"
+            android:text="Login"
+            android:textColor="@color/white"
+            app:backgroundTint="#920000" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/registerBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginBtn"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="110dp"
+            android:padding="15dp"
+            android:text="Sign Up"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:backgroundTint="#920000"
+            app:cornerRadius="25dp"
+            app:elevation="10dp"
+            app:rippleColor="@color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/noAccountTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginBtn"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="45dp"
+            android:padding="15dp"
+            android:text="Guest"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:backgroundTint="#920000"
+            app:cornerRadius="25dp"
+            app:elevation="10dp"
+            app:rippleColor="@color/white" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

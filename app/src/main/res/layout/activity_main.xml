@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back01"
+    android:padding="10dp"
+    tools:context=".Activities.MainActivity">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/gown"
+        android:layout_marginTop="100dp"
+        android:id="@+id/iconIv"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iconTv"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="welcome to Our New App"
+        android:textSize="16sp"
+        android:textColor="@color/black"/>
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#360000"
+        android:text="Login"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/shape_button01"/>
+    <Button
+        android:background="@drawable/shape_button02"
+        android:id="@+id/skipBtn"
+        android:layout_width="match_parent"
+        android:textColorHint="#360000"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:text="Continue without Login"
+        android:textColor="#360000"/>
+
+
+</RelativeLayout>

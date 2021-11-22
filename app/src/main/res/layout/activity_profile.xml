@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.profileActivity">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/back01"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/toolbarRl"
+
+        android:background="@drawable/shape_toolbar02">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_white"
+            android:background="@color/transparent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:id="@id/backBtn"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Profile"
+            android:textColor="@color/white"
+            android:id="@+id/titleTv"
+            android:textStyle="bold"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/editProfile"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/titleTv"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_edit"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/titleTv"
+            android:layout_alignParentRight="true" />
+
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_rect01"
+        android:layout_marginTop="180dp"/>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profileIv"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:background="@color/white"
+        app:shapeAppearance="@style/styleRoundedCornersImage"
+        android:src="@drawable/ic_person"/>
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_below="@id/profileIv"
+        android:layout_marginTop="8dp"
+        android:text=" full Name"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/emailTv"
+        android:text="abc@gmail.com"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:layout_below="@id/nameTv"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/detailsLl"
+        android:layout_below="@id/emailTv"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginStart="15dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account"
+                android:id="@+id/accountTypeTv"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/phoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Member"
+                android:id="@+id/memberTv"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:id="@+id/memberDateTv"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favorite Books"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:id="@+id/favoriteBookCountTv"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:id="@+id/view1"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:background="@color/gray01"
+        android:layout_height="2dp"
+        android:layout_below="@id/detailsLl"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/favoritesBooksLabelTv"
+        android:text="Favorites Books"
+        android:textColor="@color/black"
+        android:padding="5dp"
+        android:layout_below="@id/view1"
+        android:textStyle="bold"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/booksRv"
+        android:layout_below="@id/favoritesBooksLabelTv"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row_pdf_favorite">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</RelativeLayout>

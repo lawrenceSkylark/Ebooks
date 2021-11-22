@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="gray01">#c5c5c5</color>
+
+    <color name="edittextColor">#DDDDDD</color>
+    <color name="grey">#AAAAAA</color>
+
+    <item name="cardBackground" type="color">#f6f6f6</item>
+    <color name="textColor">#999DA4</color>
+    <color name ="gray02">#777777</color>
+    <color name="itemTextColor">#707070</color>
+    <color name ="gray03">#EDEDED</color>
+    <color name ="gray04">#FBFBFB</color>
+    <color name="colorRed">#EB3349</color>
+    <color name="colorPink">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="colorAccent">#f2fe71</color>
+    <color name="colorPrimary">#00bcd4</color>
+    <color name="colorPrimaryDark">#0097a7</color>
+    <color name="DarkBlue">#535288</color>
+    <color name="yellow">#F8cd06</color>
+    <color name="TransparentWhite">#30000000</color>
+
+    <color name="colorTransparentPink">#FF9EA1</color>
+
+
+
+    <color name="colorActionBar">#c5c8d1</color>
+    <color name="colorBtn">#7b818f</color>
+    <color name="colorBtnTxt">#fdfdfe</color>
+    <color name="colorTxt">#7b818f</color>
+    <color name="colorBg">#fdfdfe</color>
+    <color name="colorBorders">#a7aab3</color>
+
+
+
+    <color name="colorTaskDesc">#3be910</color>
+
+    <color name="dashboard_segment1">#9600e1ff</color>
+    <color name="dashboard_segment2">#96ff0057</color>
+    <color name="dashboard_segment3">#96ff9800</color>
+    <color name="dashboard_segment4">#9600ff83</color>
+
+
+    <color name="dashboard_segment1_h">#9600535e</color>
+    <color name="dashboard_segment2_h">#9659001e</color>
+    <color name="dashboard_segment3_h">#965e3800</color>
+    <color name="dashboard_segment4_h">#96014e29</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTransparentWhite">#cccccc</color>
+    <color name="colorStandardBlack">#262626</color>
+    <color name="colorDarkBlue">#001621</color>
+    <color name="colorCyanBlue">#0B9BE2</color>
+    <color name="colorMidBlue">#032B3F</color>
+    <color name="colorCoinBackground">#01242b</color>
+    <color name="bluegreen900">#263238</color>
+    <color name="green400">#66bb6a</color>
+    <color name="bluegreen500">#607d8b</color>
+    <color name="bluegreen300">#90a4ae</color>
+    <color name="bluegreen400">#78909c</color>
+    <color name="light_background">#ffffffff</color>
+    <color name="dark_background">#ff000000</color>
+    <color name="foreground1">#ff000000</color>
+    <color name="light_foreground1">#ffeeeeee</color>
+    <color name="dark_foreground1">#ff000000</color>
+    <color name="profilePrimaryDark">#FF3B30</color>
+    <color name="background_color">#009688</color>
+    <color name="profileAccentColor">#F7F7F7</color>
+    <color name="whiteTextColor">#fff</color>
+    <color name="profileBackground">#fff</color>
+    <color name="blackTextColor">#000</color>
+    <color name="profileEditTextColor">#707070</color>
+
+    <color name="range_white">#ffffff</color>
+    <color name="range_background_color">@color/range_white</color>
+    <color name="range_circle_background">@color/range_background_color</color>
+    <color name="range_circle_color">#f5f5f5</color>
+    <color name="range_line_background">#cccccc</color>
+    <color name="range_ampm_text_color">@color/range_numbers_text_color</color>
+    <color name="range_done_text_color_normal">#ff212121</color>
+    <color name="range_done_text_color_disabled">#cccccc</color>
+    <color name="range_numbers_text_color">#ff212121</color>
+
+    <color name="range_transparent_black">#7f000000</color>
+    <color name="range_accent_color">#009688</color>
+    <color name="range_accent_color_focused">#76ffffff</color>
+    <color name="range_neutral_pressed">#33999999</color>
+    <color name="range_accent_color_dark">#00796b</color>
+    <color name="range_date_picker_text_normal">#ff212121</color>
+    <color name="range_date_picker_text_highlighted">@color/range_date_picker_text_normal</color>
+    <color name="range_date_picker_text_disabled">#ccc</color>
+    <color name="range_date_picker_month_day">#767676</color>
+
+    <!-- DatePicker Dark Theme -->
+    <color name="range_date_picker_view_animator_dark_theme">@color/range_light_gray</color>
+    <color name="range_date_picker_text_normal_dark_theme">@color/range_white</color>
+    <color name="range_date_picker_month_day_dark_theme">#b4b4b4</color>
+    <color name="range_date_picker_text_disabled_dark_theme">#767676</color>
+    <color name="range_date_picker_text_highlighted_dark_theme">@color/range_date_picker_text_normal_dark_theme</color>
+
+    <color name="range_calendar_header">@color/range_accent_color_dark</color>
+    <color name="range_date_picker_view_animator">@android:color/white</color>
+    <color name="range_calendar_selected_date_text">#ffd1d2d4</color>
+
+    <color name="range_button_color">@color/range_accent_color</color>
+    <color name="range_button_selected">#33969696</color>
+
+    <!-- TimePicker Dark Theme -->
+    <color name="range_circle_background_dark_theme">#525252</color>
+
+    <!-- Colors for red theme -->
+
+    <color name="range_red">@color/range_accent_color</color>
+    <color name="range_red_focused">@color/range_accent_color_dark</color>
+    <color name="range_light_gray">#424242</color>
+    <color name="range_dark_gray">#323232</color>
+    <color name="range_line_dark">#808080</color>
+    <color name="range_done_text_color_dark_normal">#ffffff</color>
+    <color name="range_done_text_color_dark_disabled">#888888</color>
+    <color name="range_done_disabled_dark">#bfbfbf</color>
+
+</resources>

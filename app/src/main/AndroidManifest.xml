@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.laikipiauniversityapp">
+
+    <uses-sdk
+        tools:ignore="GradleOverrides"
+        tools:overrideLibrary="com.ismaeldivita.chipnavigation" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".Activities.MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/studentportal"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MaterialComponents.NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:theme"
+        tools:targetApi="m">
+        <activity android:name=".Activities.StudentPortalActivity"></activity>
+        <activity android:name=".Activities.ContactUsersActivity" />
+        <activity android:name=".Activities.AnnouncementDetailsActivity" />
+        <activity android:name=".Activities.AddAnnouncementsActivity" />
+        <activity android:name=".Activities.HelpActivity" />
+        <activity android:name=".Activities.CampusGuestActivity" />
+        <activity android:name=".Activities.TalkToRepresentativeActivity" />
+        <activity android:name=".Activities.MoreInformationActivity" />
+        <activity android:name=".Activities.VisitExperinceActivity" />
+        <activity android:name=".Activities.TestimonialsActivity" />
+        <activity android:name=".Activities.StudentsLifeActivity" />
+        <activity android:name=".Activities.LaikipiaNewsActivity" />
+        <activity android:name=".Activities.EventsDetailsActivity" />
+        <activity android:name=".Activities.UpcomingEventsActivity" />
+        <activity android:name=".Activities.AnnouncementsActivity" />
+        <activity android:name=".Activities.MainActivity" />
+        <activity android:name=".Activities.DashboardAdminActivity" />
+        <activity android:name=".Activities.Register3Activity" />
+        <activity android:name=".Activities.Register2Activity" />
+        <activity android:name=".Activities.RegisterActivity" />
+        <activity android:name=".Activities.MessageActivity" />
+        <activity android:name=".Activities.GroupInfoActivity" />
+        <activity android:name=".Activities.MakeSelectionActivity" />
+        <activity android:name=".Activities.PdfViewActivity" />
+        <activity android:name=".Activities.PdfDetailsActivity" />
+        <activity android:name=".Activities.pdfEditActivity" />
+        <activity android:name=".Activities.EditProfileActivity" />
+        <activity android:name=".Activities.profileActivity" />
+        <activity android:name=".Activities.ForgotPasswordActivity" />
+        <activity android:name=".Activities.OTPActivity" />
+        <activity android:name=".Activities.SetNewPasswordActivity" />
+        <activity android:name=".Activities.SuccessPasswordMessageActivity" />
+        <activity android:name=".Activities.pdfListAdminActivity" />
+        <activity android:name=".Activities.PdfAddActivity" />
+        <activity android:name=".Activities.LoginActivity" />
+        <activity android:name=".Activities.CategoryAddActivity" />
+        <activity android:name=".Activities.DashboardUserActivity" />
+        <activity
+            android:name=".Activities.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

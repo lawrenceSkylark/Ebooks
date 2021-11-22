@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/Home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home">
+
+        </item>
+        <item
+            android:id="@+id/profileBtn"
+            android:icon="@drawable/ic_person_gray"
+            android:title="profile|Fav">
+
+        </item>
+        <item
+            android:id="@+id/contactUs"
+            android:icon="@drawable/ic_help"
+            android:title="Contact Us">
+
+        </item>
+        <item
+            android:id="@+id/portal"
+            android:icon="@drawable/ic_menu"
+            android:title="Student portal ">
+
+        </item>
+        <item
+            android:id="@+id/Announcements"
+            android:icon="@drawable/ic_add"
+            android:title="Announcements">
+
+        </item>
+
+    </group>
+    <item android:title="About">
+        <menu>
+            <item
+                android:id="@+id/Developers"
+                android:icon="@drawable/developer"
+                android:title="Developer">
+
+            </item>
+
+            <item
+                android:id="@+id/Help"
+                android:icon="@drawable/ic_help"
+                android:title="Help|FAQ">
+
+            </item>
+            <item
+                android:id="@+id/share"
+                android:icon="@drawable/ic_home"
+                android:title="shareApp">
+
+            </item>
+            <item
+                android:id="@+id/dashboard"
+                android:icon="@drawable/ic_participant"
+                android:title="Dashboard">
+
+            </item>
+        </menu>
+
+    </item>
+</menu>

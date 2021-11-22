@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="1dp"
+    app:cardBackgroundColor="@color/white"
+    android:elevation="0dp"
+    app:contentPadding="8dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:strokeWidth="1dp"
+            android:id="@+id/profileIv"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_person_gray"
+            app:strokeColor="@color/gray01"
+            app:shapeAppearanceOverlay="@style/styleCircleImage"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nameTv"
+            android:textColor="@color/black"
+            android:text=" text Person name"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dateTv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/gray02"
+            android:textSize="12sp"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/commentTv"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/profileIv"
+            android:layout_toRightOf="@id/profileIv"
+            android:layout_below="@id/nameTv"
+            android:text="the actuall comment added by some user"
+            android:textSize="12sp"
+            android:textColor="@color/gray02"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
