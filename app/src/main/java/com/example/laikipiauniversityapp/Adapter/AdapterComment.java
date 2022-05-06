@@ -48,7 +48,7 @@ public class AdapterComment extends RecyclerView.Adapter<AdapterComment.HolderCo
     @Override
     public HolderComment onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        binding = RowCommentsBinding.inflate(LayoutInflater.from(context),parent,false);
+        binding = RowCommentsBinding.inflate(LayoutInflater.from(context), parent, false);
         return new HolderComment(binding.getRoot());
     }
 
@@ -59,22 +59,23 @@ public class AdapterComment extends RecyclerView.Adapter<AdapterComment.HolderCo
         String bookId = modelComment.getBookId();
         String comment = modelComment.getComment();
         String uid = modelComment.getUid();
-        String timeStamp = modelComment.getTimeStamp();
 
-        String date = MyApplication.formatTimestamp(Long.parseLong(timeStamp));
-        holder.dateTv.setText(date);
+
+        String timestamp = modelComment.getTimeStamp();
+
+        String formattedDate = MyApplication.formatTimestamp(Long.parseLong(timestamp));
+        holder.dateTv.setText(formattedDate);
+
         holder.commentTv.setText(comment);
 
-        loadUserDetails(modelComment,holder);
+        loadUserDetails(modelComment, holder);
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (firebaseAuth.getCurrentUser()!=null&& uid.equals(firebaseAuth.getUid())){
-                    deleteComment(modelComment,holder);
-                }
-            }
-        });
+       holder.itemView.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               deleteComment(modelComment,holder);
+           }
+       });
 
     }
 
@@ -99,7 +100,7 @@ public class AdapterComment extends RecyclerView.Adapter<AdapterComment.HolderCo
                                 }).addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(context, "Failed to delete due to "+e.getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(context, "Failed to delete due to " + e.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         });
                     }
@@ -119,18 +120,17 @@ public class AdapterComment extends RecyclerView.Adapter<AdapterComment.HolderCo
                 .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        String name = ""+snapshot.child("name").getValue();
-                        String profileImage = ""+snapshot.child("profileImage").getValue();
+                        String name = "" + snapshot.child("name").getValue();
+                        String profileImage = "" + snapshot.child("profileImage").getValue();
                         holder.nameTv.setText(name);
-                        profileImage = ""+snapshot.child("profileImage").getValue();
+                        profileImage = "" + snapshot.child("profileImage").getValue();
 
                         try {
                             Glide.with(context)
                                     .load(profileImage)
                                     .placeholder(R.drawable.ic_person)
                                     .into(holder.profileIv);
-                        }
-                        catch (Exception e){
+                        } catch (Exception e) {
                             holder.profileIv.setImageResource(R.drawable.ic_person);
                         }
                     }
@@ -144,19 +144,19 @@ public class AdapterComment extends RecyclerView.Adapter<AdapterComment.HolderCo
 
     @Override
     public int getItemCount() {
-        return  commentArrayList.size();
+        return commentArrayList.size();
     }
 
-    class  HolderComment extends RecyclerView.ViewHolder{
+    class HolderComment extends RecyclerView.ViewHolder {
         ShapeableImageView profileIv;
-        TextView nameTv,dateTv,commentTv;
+        TextView nameTv, dateTv, commentTv;
 
         public HolderComment(@NonNull View itemView) {
             super(itemView);
             profileIv = binding.profileIv;
-            nameTv=binding.nameTv;
-            dateTv= binding.dateTv;
-            commentTv= binding.commentTv;
+            nameTv = binding.nameTv;
+            dateTv = binding.dateTv;
+            commentTv = binding.commentTv;
         }
     }
 }

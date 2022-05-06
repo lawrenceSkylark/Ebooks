@@ -2,6 +2,7 @@
 <androidx.cardview.widget.CardView
 
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="140dp"
     app:cardBackgroundColor="@color/white"
@@ -32,6 +33,18 @@
                 android:layout_height="match_parent"/>
 
         </RelativeLayout>
+        <TextView
+            android:id="@+id/dateTv"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="wrap_content"
+            android:text="dd/mm/yyyy"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:layout_toEndOf="@id/pdfRl"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTv"
+            android:textAlignment="center"
+            android:gravity="center_horizontal" />
 
         <TextView
             android:id="@+id/titleTv"
@@ -53,26 +66,14 @@
             android:layout_width="match_parent"
             android:text="Book Description"
             android:textColor="@color/black"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:maxLines="4"
             android:ellipsize="end"
             android:layout_toEndOf="@id/pdfRl"
-            android:layout_below="@id/titleTv"
+            android:layout_below="@id/dateTv"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/pdfRl" />
 
-        <TextView
-            android:id="@+id/categoryTv"
-            style="@style/TextAppearance.MaterialComponents.Caption"
-            android:layout_width="wrap_content"
-            android:text="Category"
-            android:textColor="@color/black"
-            android:maxLines="1"
-            android:paddingLeft="1dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true" />
         <TextView
             android:id="@+id/sizeTv"
             style="@style/TextAppearance.MaterialComponents.Caption"
@@ -80,27 +81,29 @@
             android:text="13MB"
             android:textColor="@color/black"
             android:maxLines="1"
-            android:layout_toEndOf="@id/pdfRl"
+            android:paddingLeft="1dp"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_toRightOf="@id/pdfRl" />
+            />
         <TextView
-            android:id="@+id/dateTv"
+            android:id="@+id/categoryTv"
             style="@style/TextAppearance.MaterialComponents.Caption"
             android:layout_width="wrap_content"
-            android:text="dd/mm/yyyy"
+            android:text="Category"
             android:textColor="@color/black"
             android:maxLines="1"
             android:layout_toEndOf="@id/pdfRl"
             android:layout_alignParentBottom="true"
             android:layout_height="wrap_content"
-            android:layout_toStartOf="@id/categoryTv"
-            android:textAlignment="center"
             android:layout_alignParentRight="true"
-            android:layout_toRightOf="@id/sizeTv"
-            android:layout_toLeftOf="@id/categoryTv"
-            android:gravity="center_horizontal" />
+            android:layout_toRightOf="@id/pdfRl"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="100sp"
+            android:autoSizeStepGranularity="2sp"/>
+
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

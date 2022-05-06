@@ -3,16 +3,16 @@ package com.example.laikipiauniversityapp.models;
 
 public class ModelComment {
 
-    String id, bookId,timeStamp,comment,uid;
+    String id, bookId,timestamp,comment,uid;
 
     public ModelComment() {
     }
 
-    public ModelComment(String id, String bookId, String timeStamp, String comment, String uid) {
+    public ModelComment(String id, String bookId, String timestamp, String comment, String uid) {
 
         this.id = id;
         this.bookId = bookId;
-        this.timeStamp = timeStamp;
+        this.timestamp = timestamp;
         this.comment = comment;
         this.uid = uid;
     }
@@ -34,11 +34,11 @@ public class ModelComment {
     }
 
     public String getTimeStamp() {
-        return timeStamp;
+        return timestamp;
     }
 
     public void setTimeStamp(String timeStamp) {
-        this.timeStamp = timeStamp;
+        this.timestamp = timestamp;
     }
 
     public String getComment() {

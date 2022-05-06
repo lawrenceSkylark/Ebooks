@@ -30,7 +30,7 @@ import java.util.ArrayList;
 public class profileActivity extends AppCompatActivity {
     ActivityProfileBinding binding;
     private FirebaseAuth firebaseAuth;
-
+    private  String categoryId, categoryTitle;
 
     private AdapterPdfFavorite adapterPdfFavorite;
     private ArrayList <ModelPdf> pdfArrayList;
@@ -149,14 +149,16 @@ public class profileActivity extends AppCompatActivity {
                             String userType = "" + snapshot.child("userType").getValue();
                             String profileImage = "" + snapshot.child("profileImage").getValue();
                             String timestamp = "" + snapshot.child("timestamp").getValue();
+                            String course = " "+ snapshot.child("Course").getValue();
 
                             String formattedDate = MyApplication.formatTimestamp(Long.parseLong(timestamp));
-
+                            binding.memberDateTv.setText(formattedDate);
                             binding.phoneNumber.setText(phoneNo);
                             binding.emailTv.setText(email);
+                            binding.courseTv.setText(course);
                             binding.nameTv.setText(name);
                             binding.accountTypeTv.setText(userType);
-                            binding.memberDateTv.setText(formattedDate);
+
 
                             Glide.with(getApplicationContext())
                                     .load(profileImage)

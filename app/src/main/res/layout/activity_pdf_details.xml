@@ -36,6 +36,7 @@
     <androidx.core.widget.NestedScrollView
         android:background="@color/gray01"
         android:layout_width="match_parent"
+        android:layout_above="@+id/bookOptionsLl"
         android:layout_height="match_parent"
         android:padding="10dp"
         android:layout_below="@id/toolbarRl">
@@ -77,6 +78,7 @@
                     style="@style/TextAppearance.MaterialComponents.Headline6"
                     android:layout_width="match_parent"
                     android:text="Book title "
+                    android:maxLines="1"
                     android:layout_height="match_parent"
                     android:layout_toRightOf="@id/pdfRl" />
 
@@ -272,13 +274,14 @@
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
     <LinearLayout
-        android:background="@color/gray01"
+        android:background="@color/design_default_color_primary"
         android:id="@+id/bookOptionsLl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true">
         <Button
+            android:background="@color/design_default_color_primary"
             android:id="@+id/readBookBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -288,6 +291,7 @@
             android:drawableTop="@drawable/ic_book_white"
             android:layout_alignParentBottom="true"/>
         <Button
+            android:background="@color/design_default_color_primary"
             android:id="@+id/downloadBookBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -297,6 +301,7 @@
             android:drawableTop="@drawable/ic_download_white"
             android:layout_alignParentBottom="true"/>
         <Button
+            android:background="@color/design_default_color_primary"
             android:id="@+id/favoriteBookBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

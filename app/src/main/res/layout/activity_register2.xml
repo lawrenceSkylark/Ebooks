@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/signup_background"
+    android:background="@color/black"
     android:padding="30dp"
     tools:context=".Activities.Register2Activity">
 
@@ -24,7 +24,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="5dp">
 
 
             <TextView
@@ -34,9 +34,10 @@
                 android:layout_centerVertical="true"
                 android:text="create_account"
                 android:textAllCaps="true"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="30sp"
                 android:transitionName="transition_title_text" />
+
 
 
             <TextView
@@ -50,7 +51,7 @@
                 android:padding="10dp"
                 android:text="2/3"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:transitionName="transition_slide_text" />
@@ -62,14 +63,35 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="1dp"
             android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/categoryTv"
+                android:layout_marginTop="100dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/shape_edittext01"
+                android:drawableStart="@drawable/ic_category_gray"
+                android:drawableEnd="@drawable/ic_download_white"
+                android:drawableRight="@drawable/ic_download_white"
+                android:drawableLeft="@drawable/ic_category_gray"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:layout_below="@id/toolbarRl"
+                android:textColorHint="@color/black"
+                android:hint="course Title"
+                android:textSize="16sp"/>
 
             <TextView
+                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Choose Gender"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
 
@@ -111,14 +133,14 @@
                 android:layout_height="2dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:background="@color/black" />
+                android:background="@color/white" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Select Your Age"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
 
@@ -147,8 +169,6 @@
             android:textColor="@color/white"
             android:transitionName="transition_next_btn" />
 
-
     </LinearLayout>
-
 
 </ScrollView>

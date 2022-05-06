@@ -51,7 +51,7 @@ public class OTPActivity extends AppCompatActivity {
     String codeBySystem;
 
 
-    String phoneNo,gender,email,password,username,date,fullName;
+    String phoneNo,gender,email,password,username,date,fullName,course;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +82,7 @@ public class OTPActivity extends AppCompatActivity {
         password = getIntent().getStringExtra("password");
         date = getIntent().getStringExtra("date");
         gender = getIntent().getStringExtra("gender");
+        course=getIntent().getStringExtra("course");
         phoneNo= getIntent().getStringExtra("phoneNo");
         createUserAccount();
         //    before creating user lets validate data
@@ -189,6 +190,7 @@ public class OTPActivity extends AppCompatActivity {
         hashMap.put("name" , username);
         hashMap.put("fullName", fullName);
         hashMap.put("userType" , "user");
+        hashMap.put("Course",course);
         hashMap.put("timestamp" , timestamp);
         hashMap.put("profileImage" , "");
 

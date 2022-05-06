@@ -24,7 +24,8 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:theme"
         tools:targetApi="m">
-        <activity android:name=".Activities.StudentPortalActivity"></activity>
+        <activity android:name=".Activities.LevelActivity"></activity>
+        <activity android:name=".Activities.StudentPortalActivity" />
         <activity android:name=".Activities.ContactUsersActivity" />
         <activity android:name=".Activities.AnnouncementDetailsActivity" />
         <activity android:name=".Activities.AddAnnouncementsActivity" />

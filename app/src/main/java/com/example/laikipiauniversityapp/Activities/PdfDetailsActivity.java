@@ -43,7 +43,7 @@ public class PdfDetailsActivity extends AppCompatActivity {
     private ActivityPdfDetailsBinding binding;
 
     private ArrayList<ModelComment> commentArrayList;
-    private AdapterComment adapterComments;
+    private AdapterComment adapterComment;
 
     public  static  final String TAG_DOWNLOAD="DOWNLOAD_TAG";
 
@@ -151,7 +151,7 @@ public class PdfDetailsActivity extends AppCompatActivity {
     private void loadComments() {
         commentArrayList = new ArrayList<>();
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Books");
-        reference.child("bookId").child("Comments")
+        reference.child(bookId).child("Comments")
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -161,7 +161,8 @@ public class PdfDetailsActivity extends AppCompatActivity {
                             commentArrayList.add(model);
 
                         }
-                        binding.commentsRv.setAdapter(adapterComments);
+                        adapterComment = new AdapterComment(PdfDetailsActivity.this,commentArrayList);
+                        binding.commentsRv.setAdapter(adapterComment);
                     }
 
                     @Override
@@ -214,13 +215,13 @@ public class PdfDetailsActivity extends AppCompatActivity {
         hashMap.put("id",""+timestamp);
         hashMap.put("bookId",""+bookId);
         hashMap.put("timestamp", ""+timestamp);
-        hashMap.put("Comments", ""+comment);
+        hashMap.put("comment", "" + comment);
         hashMap.put("uid",""+firebaseAuth.getUid());
 
 
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Books");
 
-        ref.child(bookId).child("Comments")
+        ref.child(bookId).child("Comments").child(timestamp)
                 .setValue(hashMap)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
@@ -273,6 +274,7 @@ public class PdfDetailsActivity extends AppCompatActivity {
                 String viewsCount = "" + snapshot.child("viewsCount").getValue();
                 String bookUrl = "" + snapshot.child("Url").getValue();
                 String timestamp = "" + snapshot.child("timestamp").getValue();
+                String formattedDate = MyApplication.formatTimestamp(Long.parseLong(timestamp));
 
                 binding.downloadBookBtn.setVisibility(View.VISIBLE);
 
@@ -294,7 +296,7 @@ public class PdfDetailsActivity extends AppCompatActivity {
 //                        set data
                 binding.titleTv.setText(bookTitle);
 
-                binding.dateTv.setText(timestamp);
+                binding.dateTv.setText(formattedDate);
                 binding.categoryTv.setText(categoryId);
                 binding.descriptionTv.setText(description);
                 binding.downloadsTv.setText(downloadsCount.replace("null", "N/A"));

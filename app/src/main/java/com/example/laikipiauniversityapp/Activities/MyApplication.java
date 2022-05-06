@@ -36,7 +36,6 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Locale;
 
-import static android.content.ContentValues.TAG;
 import static com.example.laikipiauniversityapp.Activities.Constants.MAX_BYTES_PDF;
 
 public class MyApplication extends Application {
@@ -48,10 +47,11 @@ public class MyApplication extends Application {
 
         FirebaseDatabase.getInstance().setPersistenceEnabled(true);
     }
-    public  static String formatTimestamp (Long timestamp){
+    public  static final String formatTimestamp (long timestamp){
         Calendar cal = Calendar.getInstance(Locale.ENGLISH);
-        cal.setTimeInMillis(timestamp);
-        return DateFormat.format("dd/MM/yyyy",cal).toString();
+        cal.setTimeInMillis(Long.parseLong(String.valueOf(timestamp)));
+        return DateFormat.format("dd/MM/yyyy" , cal).toString();
+
     }
     public static void deleteBook(Context context, String bookId, String bookUrl, String bookTitle) {
 

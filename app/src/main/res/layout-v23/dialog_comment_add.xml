@@ -37,7 +37,6 @@
         android:layout_marginTop="20dp"
         android:background="@color/transparent"
         android:hint="Comment"
-        app:hintEnabled="true"
         android:textColorHint="@color/black"
         android:drawablePadding="10dp"
         android:drawableTint="@color/black"
@@ -46,8 +45,6 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/commentEt"
             android:layout_width="match_parent"
-            android:drawableLeft="@drawable/ic_email"
-            android:drawablePadding="10dp"
             android:layout_height="wrap_content"
             android:background="@drawable/shape_edittext01"
             android:inputType="textCapSentences|textMultiLine"
@@ -63,7 +60,6 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_button01"
         android:text="Submit"
-        android:textColorHint="@color/black"
-        android:textColor="@color/black" />
+        android:textColor="@color/white" />
 
 </RelativeLayout>

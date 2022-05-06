@@ -23,12 +23,14 @@
             app:shapeAppearanceOverlay="@style/styleCircleImage"/>
 
         <TextView
+            android:layout_toRightOf="@+id/profileIv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/nameTv"
+            android:layout_marginLeft="10dp"
             android:textColor="@color/black"
             android:text=" text Person name"
-            android:textSize="16sp"/>
+            android:textSize="14sp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -36,21 +38,23 @@
             android:id="@+id/dateTv"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="5dp"
-            android:textColor="@color/gray02"
+            android:textColor="@color/black"
             android:textSize="12sp"
+            android:text="dd/MM/yyyy"
             android:layout_alignParentRight="true" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/commentTv"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
             android:layout_toEndOf="@id/profileIv"
             android:layout_toRightOf="@id/profileIv"
             android:layout_below="@id/nameTv"
-            android:text="the actuall comment added by some user"
+            android:text="the actual comment added by some user"
             android:textSize="12sp"
-            android:textColor="@color/gray02"/>
+            android:textColor="@color/black"/>
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

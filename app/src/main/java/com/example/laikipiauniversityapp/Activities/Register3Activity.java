@@ -24,7 +24,7 @@ public class Register3Activity extends AppCompatActivity {
     ActivityRegister3Binding binding;
     TextInputLayout phoneNumber;
     CountryCodePicker countryCodePicker;
-    String gender,email,password,username,date,fullName;
+    String gender,email,password,username,date,fullName,course;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class Register3Activity extends AppCompatActivity {
         scrollView = findViewById(R.id.signup_3rd_screen_scroll_view);
         countryCodePicker = findViewById(R.id.country_code_picker);
         phoneNumber = findViewById(R.id.signup_phone_number);
-
+         course= getIntent().getStringExtra("course");
         fullName = getIntent().getStringExtra("fullName");
         email = getIntent().getStringExtra("email");
         username = getIntent().getStringExtra("username");
@@ -65,6 +65,7 @@ public class Register3Activity extends AppCompatActivity {
                 i.putExtra("date", date);
                 i.putExtra("gender", gender);
                 i.putExtra("phoneNo", phoneNo);
+                i.putExtra("course",course);
                 startActivity(i);
             }
 
